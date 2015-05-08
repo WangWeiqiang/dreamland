@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>500px random lock screen wallpaper</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/cropper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<span class="navbar-brand"><img src="img/dreamland-logo.png" style="height:20px"/></span>
+					<!--
+					<span class="sprite navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-subcategory" id="top-btn-subcategory">
+						<img src="img/button-cover.png">
+					</span>
+					
+					<img src="img/button-split.png" class="top-btn-split"/>-->
+					<span class="sprite sprite-popular navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-maincategory" id="top-btn-maincategory">
+						<img src="img/button-cover.png">
+					</span>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-maincategory">
+					<ul class="nav navbar-nav navbar-right text-right">
+						<li class="nav-item-featured" data-category="popular" data-page="1" data-imagesize="2"><span>Popular</span><span class="sprite sprite-popular"></span></li>
+						<li class="nav-item-featured" data-category="fresh_today" data-page="1" data-imagesize="2"><span>Fresh</span><span class="sprite sprite-fresh_today"></span></li>
+						<li class="nav-item-featured" data-category="upcoming" data-page="1" data-imagesize="2"><span>Upcoming</span><span class="sprite sprite-upcoming"></span></li>
+						<li class="nav-item-featured" data-category="editors" data-page="1" data-imagesize="2"><span>Editor's Choice</span><span class="sprite sprite-editors"></span></li>
+						<li class="nav-item-featured" data-category="highest_rated" data-page="1" data-imagesize="2"><span>Trending Profiles</span><span class="sprite sprite-highest_rated"></span></li>
+					</ul>
+				</div>
+				<!--
+				<div class="collapse navbar-collapse" id="navbar-collapse-subcategory">
+					<ul class="nav navbar-nav navbar-right text-right">
+			            <li><a href="?categories=Abstract">Abstract</a></li>
+			            <li><a href="?categories=Macro">Macro</a></li>
+			            <li><a href="?categories=Animals">Animals</a></li>
+			            <li><a href="?categories=Nature">Nature</a></li>
+			            <li><a href="?categories=Black+and+White">Black and White</a></li>
+			            <li><a href="?categories=People">People</a></li>
+			            <li><a href="?categories=Celebrities">Celebrities</a></li>
+			            <li><a href="?categories=Performing+Arts">Performing Arts</a></li>
+			            <li><a href="?categories=City+%26+Architecture">City &amp; Architecture</a></li>
+			            <li><a href="?categories=Sport">Sport</a></li>
+			            <li><a href="?categories=Commercial">Commercial</a></li>
+			            <li><a href="?categories=Still+Life">Still Life</a></li>
+			            <li><a href="?categories=Concert">Concert</a></li>
+			            <li><a href="?categories=Street">Street</a></li>
+			            <li><a href="?categories=Family">Family</a></li>
+			            <li><a href="?categories=Transportation">Transportation</a></li>
+			            <li><a href="?categories=Fashion">Fashion</a></li>
+			            <li><a href="?categories=Travel">Travel</a></li>
+			            <li><a href="?categories=Film">Film</a></li>
+			            <li><a href="?categories=Underwater">Underwater</a></li>
+			            <li><a href="?categories=Fine+Art">Fine Art</a></li>
+			            <li><a href="?categories=Urban+Exploration">Urban Exploration</a></li>
+			            <li><a href="?categories=Food">Food</a></li>
+			            <li><a href="?categories=Wedding">Wedding</a></li>
+			            <li><a href="?categories=Journalism">Journalism</a></li>
+			            <li><a href="?categories=Uncategorized">Uncategorized</a></li>
+			            <li><a href="?categories=Landscapes">Landscapes</a></li>
+					<ul>
+				</div>
+			-->
+			</div>
+		</nav>
+		<ul id="gallery">
+
+		</ul>
+
+		<div id="photo" class="vcenter">
+			<div id="photo-container" class="vcenter">
+				<img src="img/dot-clear.png" class="bigphoto" id="bigphoto"/>
+			</div>
+			<div id="photo-bar">
+			</div>
+			<div id="photocrop-bar" class="text-center">
+				<button type="button" class="btn btn-primary" data-method="getCroppedCanvas">CROP</button>
+				<button type="button" class="btn btn-default" id="bt-cancel">CANCEL</button>
+			</div>
+		</div>
+
+		<div id="cropresult">
+			<div id="canvas-container"></div>
+			<div id="cropresult-bar" class="text-center">
+				<button type="button" class="btn btn-primary" id="bt-share">SHARE</button>
+				<button type="button" class="btn btn-default" id="bt-remove">CANCEL</button>
+				<!--<img src="img/share.png" id="bt-share"/><img src="img/save.png" id="bt-save"/><img src="img/remove.png" id="bt-remove"/>-->
+			</div>
+		</div>
+
+		<div id="loading">
+
+		</div>
+	</div>
+	<script src="phonegap.js"></script>
+	<script type="text/javascript" src="js/500px.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.panzoom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/cropper.min.js"></script>
+	<script src="js/CanvasSaveImage.js"></script>
+	<script src="js/CanvasPlugin.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
